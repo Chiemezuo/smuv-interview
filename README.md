@@ -8,12 +8,18 @@ Ensure you have the following installed:
 - **Node.js** (v22 recommended)
 - **npm** (v10 recommended)
 - **MongoDB**
+- **Docker** (Optional for Docker setup)
 
 ## Installation
+There are two types of setup:
+1. Locally: You will need your own MongoDB URI and can check or modify the database as you please
+2. Docker: This is a zero-config setup, and will give you all you need right out of the box. However, needing to modify the database will require more effort on your part.
+
+For the local setup, please continue. For the Docker setup, follow [these steps](#docker-installation)
 
 ### 1. Clone the Repository
 ```sh
-git clone https://github.com/Chiemezuo/smuv-interview
+git clone https://github.com/Chiemezuo/smuv-interview.git
 cd smuv-interview
 ```
 
@@ -114,4 +120,21 @@ The endpoint for this is `api/sales/date/`. It is only accessible to logged in a
     "productId": "MongoDb ID",
     "date": "ISO Date string"
 }
+```
+
+## Docker Installation
+For the zero-config step, follow these steps:
+
+### 1. Clone the Repository
+```sh
+git clone https://github.com/Chiemezuo/smuv-interview.git
+cd smuv-interview
+```
+
+### 2. Run the Docker Engine
+Usually by opening your Docker application.
+
+### 3. Run the Docker Build Command.
+```sh
+docker-compose up --build
 ```
