@@ -10,7 +10,6 @@ const {
 
 // Generate JWT token
 const generateToken = async (id, res) => {
-  // Wrap the email and role in the jwt too?
   const token = jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN || '1d'
   });

@@ -36,8 +36,6 @@ const userSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
-// Should we index for orders?
-
 // Hash password before saving
 userSchema.pre('save', async function(next) {
   // Only hash the password if it's modified (or new)
